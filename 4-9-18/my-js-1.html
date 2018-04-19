@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JS Exercise</title>
+    <script type="text/javascript">
+
+function grade_calc(g){
+    if(g>=90){
+      return "A";
+    }
+    else if(g>=80){
+      return "B";
+    }
+    else if (g>=70){
+      return "C";
+    }
+    else if (g>=60){
+      return "D";
+    }
+    else
+    return "F";
+  }
+  console.log("Your grade is 85 which is "+ grade_calc(85));
+  console.log("Your grade is 90 which is "+ grade_calc(90));
+  console.log("Your grade is 60 which is "+ grade_calc(60));
+  console.log("Your grade is 75 which is "+ grade_calc(75));
+  console.log("Your grade is 59 which is "+ grade_calc(59));
+
+const grade=89;
+  switch (true){
+    case grade>=90:
+    console.log('A');
+    break;
+    case grade>=80:
+    console.log('B');
+    break;
+    case grade>=70:
+    console.log('C');
+    break;
+    case grade>=60:
+    console.log('D');
+    break;
+    default:
+    console.log('F');
+
+  }
+
+
+  </script>
+</head>
+<body>
+  <h1>JS Exercise, see console for details</h1>
+</body>
+
+
+</html>
