@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 app = Flask(__name__)
 
 
@@ -19,17 +19,15 @@ def user():
     return "this is a user page"
 
 
-@app.route('/form-basics')
-def form_basics():
-        # return "hello friend"
-    return render_template('form-basics.html')
+@app.route('/form', methods=['GET', 'POST'])
+def form():
+    if request.method=='GET':
+        #return "hello GET"
+        return render_template('form.html')
+    if request.method=='POST':
+        first_name= request.form["first_name"]
+        return render_template('form.html', first_name=first_name)
 
-
-@app.route('/form-demo')
-def form_demo():
-        # return "hello friend"
-    first_name=request.args.get('first_name')
-    return first_name
 
 
 if __name__ == '__main__':
